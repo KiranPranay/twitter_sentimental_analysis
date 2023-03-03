@@ -78,11 +78,11 @@ def pred1():
             text = request.form['txt']
             blob = TextBlob(text)
             if blob.sentiment.polarity > 0:
-                text_sentiment = "positive"
+                text_sentiment = "🙂 (Positive)"
             elif blob.sentiment.polarity == 0:
-                text_sentiment = "neutral"
+                text_sentiment = "😐 (Neutral)"
             else:
-                text_sentiment = "negative"
+                text_sentiment = "😥 (Negative)"
             return render_template('result1.html',msg=text, result=text_sentiment)
 
 if __name__ == '__main__':
