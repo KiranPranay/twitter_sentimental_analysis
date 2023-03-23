@@ -66,6 +66,11 @@ def home():
 def about():
     return render_template('about.html')
 
+# new route to contact.html
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 
 # Phrase level sentiment analysis
 @app.route("/predict", methods=['POST','GET'])
