@@ -61,6 +61,11 @@ except:
 def home():
     return render_template('index.html')
 
+# new route to about.html
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 
 # Phrase level sentiment analysis
 @app.route("/predict", methods=['POST','GET'])
@@ -78,11 +83,11 @@ def pred1():
             text = request.form['txt']
             blob = TextBlob(text)
             if blob.sentiment.polarity > 0:
-                text_sentiment = "🙂 (Positive)"
+                text_sentiment = "Positive"
             elif blob.sentiment.polarity == 0:
-                text_sentiment = "😐 (Neutral)"
+                text_sentiment = "Neutral"
             else:
-                text_sentiment = "😥 (Negative)"
+                text_sentiment = "Negative"
             return render_template('result1.html',msg=text, result=text_sentiment)
 
 if __name__ == '__main__':
