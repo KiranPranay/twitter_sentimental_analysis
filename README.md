@@ -9,14 +9,13 @@ This project uses Natural Language Processing techniques to perform sentiment an
 - Prerequisites
 - Python 3.7 or higher
 - pip package manager
-- Twitter API keys
 
 ## Installation
 
 - Clone the repository
 
 ```bash
-git clone https://github.com/your_username/twitter-sentiment-analysis.git
+git clone https://github.com/KiranPranay/twitter_sentimental_analysis.git
 ```
 
 - Install the required packages
@@ -24,8 +23,6 @@ git clone https://github.com/your_username/twitter-sentiment-analysis.git
 ```
 pip install -r requirements.txt
 ```
-
-- Enter your Twitter API keys in the config.py file
 
 ## Usage
 
@@ -47,9 +44,8 @@ python app.python
 
 - Python
 - Flask
-- Tweepy
+- Snscrape
 - TextBlob
-- Chart.js
 
 ## License
 
@@ -60,3 +56,5 @@ This project is licensed under the [MITLicense](https://github.com/KiranPranay/s
 - [Sentdex](https://www.youtube.com/user/sentdex) for the tutorial on which this project is based.
 
 - [TextBlob](https://textblob.readthedocs.io/en/dev/) for providing an easy-to-use API for natural language processing.
+
+- [Snscrape](https://github.com/JustAnotherArchivist/snscrape.git) for scraping tweets.
