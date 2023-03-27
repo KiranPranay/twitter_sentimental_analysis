@@ -82,16 +82,23 @@
     >
       <div class="container text-center my-5 py-5">
         <h1 class="text-white mt-4 mb-4">SentiTrend</h1>
-        <h1 class="text-white display-1 mb-5">Sentimental Analysys</h1>
+        <h1 class="text-white display-1 mb-5">Twitter Sentimental Analysys</h1>
         <div class="mx-auto mb-5" style="width: 100%; max-width: 600px">
-          <form action="/predict1" method="post">
+          <form action="/predict" method="post">
             <div class="input-group">
               <input
                 type="text"
-                name="txt"
+                name="query"
+                class="form-control border-light"
+                style="padding: 30px 25px; width: 23em"
+                placeholder="Keyword"
+              />
+              <input
+                type="text"
+                name="num"
                 class="form-control border-light"
                 style="padding: 30px 25px"
-                placeholder="Keyword"
+                placeholder="Count"
               />
               <div class="input-group-append">
                 <button
@@ -103,6 +110,19 @@
                 </button>
               </div>
             </div>
+            <!--   hyperlink -->
+            <p style="text-align: center; color: #ffffff; margin-top: 10px">
+              <a
+                href="/sentiment"
+                target="_blank"
+                style="
+                  text-align: center;
+                  text-decoration: none;
+                  color: #ffffff;
+                "
+                >Click here for sentence sentimental analysis</a
+              >
+            </p>
           </form>
         </div>
       </div>
