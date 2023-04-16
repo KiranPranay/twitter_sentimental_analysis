@@ -110,6 +110,7 @@
             {% set result = result %} {% if result == "positive" %}
             <div class="d-flex mb-3">
               <div class="btn-icon bg-primary mr-4">
+                
                 <img
                   width="50px"
                   ;
@@ -123,6 +124,11 @@
                   Sentiments that are considered positive such as happiness,
                   excitement, love, and joy.
                 </p>
+                <audio
+                  controls
+                  autoplay
+                  hidden
+                  src="{{url_for('static', filename='music/positive.mp3')}}">
               </div>
             </div>
             {% elif result == 'neutral' %}
@@ -140,6 +146,11 @@
                   Sentiments that are considered neutral such as objectivity,
                   indifference, and lack of emotion.
                 </p>
+                <audio
+                  controls
+                  autoplay
+                  hidden
+                  src="{{url_for('static', filename='music/neutral.mp3')}}">
               </div>
             </div>
             {% else %}
@@ -157,6 +168,11 @@
                   Sentiments that are considered negative such as sadness,
                   anger, disappointment, and frustration.
                 </p>
+                <audio
+                  controls
+                  autoplay
+                  hidden
+                  src="{{url_for('static', filename='music/negative.mp3')}}">
               </div>
             </div>
             {% endif %}
